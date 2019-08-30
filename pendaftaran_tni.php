@@ -1,9 +1,9 @@
 <?php
 function t_b($bb,$tb){
-    if ($bb>60 && $tb>165) {
-        return "DiTerima";
+    if ($bb<=60 && $bb >= 50 && $tb>165) {
+        return "Selamat Anda DiTerima";
     }else {
-        return "Tidak DiTerima";        
+        return "Selamat Anda Tidak DiTerima<br>Latihan lebih giat lagi ok :)";        
     }
 }
 ?>
@@ -59,7 +59,7 @@ function t_b($bb,$tb){
         <td>: <?=$tinggi_badan?></td>
         </tr>
         </table>
-        <h2><?=t_b($berat_badan,$tinggi_badan)?></h2>;
+        <h2><?=t_b($berat_badan,$tinggi_badan)?></h2>
     <?php }
     ?>
 </body>
